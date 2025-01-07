@@ -55,7 +55,7 @@ class Ws_Param(object):
 
     # 生成url
     def create_url(self):
-        url = 'wss://ws-api.xfyun.cn/v2/iat'
+        url = 'wss://iat-api.xfyun.cn/v2/iat'
         # 生成RFC1123格式的时间戳
         now = datetime.now()
         date = format_date_time(mktime(now.timetuple()))
@@ -169,8 +169,8 @@ def on_open(ws):
 if __name__ == "__main__":
     # 测试时候在此处正确填写相关信息即可运行
     time1 = datetime.now()
-    wsParam = Ws_Param(APPID='78b9f375', APISecret='xxxxx',
-                       APIKey='xxxxx',
+    wsParam = Ws_Param(APPID='05de02d2', APISecret='ZGIxOTU1OGIzZjU2MjlkMTU4N2QwN2Jl',
+                       APIKey='72cf6eeec1903ffbeeb6cf8f9e933f1a',
                        AudioFile=r'xxxxx')
     websocket.enableTrace(False)
     wsUrl = wsParam.create_url()
